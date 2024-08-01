@@ -1,38 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: url('./background.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover entire background */
+  color: white;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.frosted-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(100px) brightness(0.9); /* Frosted glass effect */
+  background-color: rgba(0, 0, 0, 0.1); /* Slight white tint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Layer above the background */
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Layer above the frosted layer */
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+}
+
+.header nav ul li a,
+.icons a {
+  color: white; /* White color for links */
+  text-decoration: none; /* No underline */
+}
+
+.header nav ul li a:hover,
+.icons a:hover {
+  color: white; /* Ensure color remains white on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  padding: 40px;
+  backdrop-filter: blur(100px) brightness(0.8); 
+  background-color: rgba(0, 0, 0, 0); 
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white; /* White text */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  max-width: 900px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text-section {
+  text-align: left;
+}
+
+.text-section h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.text-section p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.image-section img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  padding-left:30px;
+  padding-right:30px;
+  object-fit: cover;
+}
+
+.icons {
+  margin-top: 20px;
+}
+
+.icons img {
+  width: 30px;
+  padding-left:10px;
+  padding-right:10px;
+  height: 30px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
   color: white;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  color: #00A3FF; /* Vercel brand color */
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer a:hover {
+  text-decoration: underline;
 }
