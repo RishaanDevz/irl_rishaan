@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
 import profilePic from '/src/profile.jpg';
-import Projects from './Projects';
+import Projects from '/src/Projects';
 import githubIcon from '/src/github_icon.png'; // Ensure you import these if paths are inside src
 import discordIcon from '/src/discord_icon.png'; 
 
