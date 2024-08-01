@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
-import profilePic from 'profile.jpg';
-import Projects from 'Projects';
-import githubIcon from 'github_icon.png'; // Ensure you import these if paths are inside src
-import discordIcon from 'discord_icon.png'; 
+import profilePic from './profile.jpg';
+import Projects from './Projects';
+import githubIcon from './github_icon.png'; // Ensure you import these if paths are inside src
+import discordIcon from './discord_icon.png'; 
 
 const App = () => {
   return (
