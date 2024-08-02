@@ -3,13 +3,13 @@ import './Projects.css';
 
 const projects = [
   {
-    title: "Project One",
-    description: "Description for project one.",
+    title: "CarrotOS",
+    description: `CarrotOS is my "magnum opus", if you will. An OS, based purely on AI. Click on me to learn more!`,
     link: "https://github.com/username/project-one"
   },
   {
-    title: "Project Two",
-    description: "Description for project two.",
+    title: "Persist",
+    description: `Persist is the annoying task manager that forces you to do your tasks. It will hover over all your windows, and it will MAKE you do your tasks`,
     link: "https://github.com/username/project-two"
   },
   // Add more projects as needed
