@@ -22,7 +22,6 @@ body {
   animation-delay: 0.5s; /* Slight delay to match card animations */
 }
 
-
 .projects-title {
   font-size: 3rem;
   font-family: 'IBM Plex Mono', monospace;
@@ -40,23 +39,25 @@ body {
 }
 
 .projects-container {
-  display: grid;
+  display: flex;
   gap: 20px;
-  grid-template-columns: 1fr;
-  width: 100%;
-  max-width: 1200px;
+  overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+  padding: 10px;
+  max-width: 100%;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   backdrop-filter: blur(100px) brightness(0.7); 
   background-color: rgba(28, 28, 28, 0.1); 
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: white;
-  backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  aspect-ratio: 16 / 9;
+  width: 300px;
   opacity: 0;
   animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 1.5s; /* Staggered delay for smoother appearance */
@@ -66,21 +67,33 @@ body {
   transform: scale(1.05);
 }
 
-.project-card h2 {
-  margin-top: 0;
-  font-family: 'IBM Plex Mono', monospace;
+.project-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.project-card p {
+.project-info {
+  text-align: center;
+}
+
+.project-info h2 {
+  margin-top: 0;
   font-family: 'Inter', sans-serif;
 }
 
-.project-card a {
+.project-info p {
+  font-family: 'Inter', sans-serif;
+}
+
+.project-info a {
   color: #0073e6;
   text-decoration: none;
 }
 
-.project-card a:hover {
+.project-info a:hover {
   text-decoration: underline;
 }
 
