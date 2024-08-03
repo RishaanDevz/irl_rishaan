@@ -6,6 +6,7 @@ import profilePic from './profile.jpg';
 import Projects from './Projects';
 import githubIcon from './github_icon.png';
 import discordIcon from './discord_icon.png';
+import instaIcon from './insta_icon.png';
 
 const App = () => {
   return (
@@ -49,10 +50,19 @@ const App = () => {
                             transition={{ duration: 0.3 }}
                           />
                         </a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://discord.com/users/807664057343148042" target="_blank" rel="noopener noreferrer">
                           <motion.img
                             src={discordIcon}
-                            alt="Resume"
+                            alt="Discord"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        </a>
+                        <a href="https://www.instagram.com/irl_rishaan" target="_blank" rel="noopener noreferrer">
+                          <motion.img
+                            src={instaIcon}
+                            alt="Instagram"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.3 }}
@@ -77,7 +87,7 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
           </Routes>
           <footer className="footer">
-            <p>© 2024 irl_rishaan. Powered by <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a></p>
+            <p>© 2024 irl_rishaan. Powered by Vercel</p>
           </footer>
         </div>
       </div>
