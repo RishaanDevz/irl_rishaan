@@ -17,12 +17,14 @@ body {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(100px) brightness(0.9); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(100px) brightness(0.9); /* Prefix for Safari */
   background-color: rgba(0, 0, 0, 0.1); /* Slight white tint */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1; /* Layer above the background */
 }
+
 
 .App {
   text-align: center;
@@ -75,47 +77,68 @@ body {
 }
 
 .card {
-  padding: 40px;
-  backdrop-filter: blur(100px) brightness(0.8); 
-  background-color: rgba(0, 0, 0, 0); 
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  color: white; /* White text */
+  color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 90%;
   max-width: 900px;
+  position: relative;
 }
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05); /* White tint for a frosted effect */
+  border-radius: 15px;
+  z-index: -1;
+}
+
 
 .card-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
 
 .text-section {
-  text-align: left;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .text-section h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 2em; /* Adjust font size for better readability on mobile */
 }
 
 .text-section p {
   margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 1em; /* Adjust font size for better readability on mobile */
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .image-section img {
-  width: 170px;
-  height: 170px;
+  width: 120px; /* Adjust width for mobile */
+  height: 120px; /* Adjust height for mobile */
   border-radius: 50%;
-  padding-left:30px;
-  padding-right:30px;
   object-fit: cover;
+  box-sizing: border-box;
 }
 
 .icons {
@@ -124,8 +147,8 @@ body {
 
 .icons img {
   width: 30px;
-  padding-left:5px;
-  padding-right:5px;
+  padding-left: 5px;
+  padding-right: 5px;
   height: 30px;
 }
 
@@ -145,4 +168,25 @@ body {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+    width: 95%;
+  }
+
+  .text-section h1 {
+    font-size: 1.8em;
+  }
+
+  .text-section p {
+    font-size: 0.9em;
+  }
+
+  .image-section img {
+    width: 100px;
+    height: 100px;
+  }
 }
