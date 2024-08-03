@@ -6,14 +6,14 @@ const projects = [
     title: "CarrotOS",
     description: `CarrotOS is my "magnum opus", if you will. An OS, based purely on AI. Click on me to learn more!`,
     link: "https://github.com/username/project-one",
-    image: "carrotos.webp", // Relative path to the image file
+    image: "./carrotos.webp", // Relative path to the image file
     onGithub: 0,
   },
   {
     title: "Persist",
     description: `Persist is the annoying task manager that forces you to do your tasks. It will hover over all your windows, and it will MAKE you do your tasks.`,
     link: "https://github.com/username/project-two",
-    image: "persist.webp", // Relative path to the image file
+    image: "./persist.webp", // Relative path to the image file
     onGithub: 1,
   },
   // Add more projects as needed
